@@ -1,21 +1,5 @@
-/**
- * Copyright 2020 Vercel Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 import cn from 'classnames';
-import VercelLogo from '@components/icons/icon-platform';
+// import VercelLogo from '@components/icons/icon-platform';
 import styles from './footer.module.css';
 import { COPYRIGHT_HOLDER, SITE_NAME, CODE_OF_CONDUCT, LEGAL_URL, REPO } from '@lib/constants';
 
@@ -27,8 +11,8 @@ export function HostedByVercel() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className={styles['secondary-text']}>Created by </div>
-      <VercelLogo color="white" />
+      <div className={styles['secondary-text']}>ویرایش شده توسط : هومن امینی </div>
+      {/* <VercelLogo color="white" /> */}
     </a>
   );
 }
@@ -42,8 +26,7 @@ export default function Footer() {
           <div className={styles['footer-separator']} />
         </div>
         <div className={styles['footer-copyright']}>
-          Copyright © {`${new Date().getFullYear()} `} {COPYRIGHT_HOLDER || `${SITE_NAME}.`} All
-          rights reserved.
+          کپی رایت © {`۱۴۰۰ `} {COPYRIGHT_HOLDER || `${SITE_NAME}.`}
         </div>
         <div className={styles['footer-center-group']}>
           <p className={styles['footer-paragraph']}>
@@ -53,7 +36,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Source Code
+              سورس کد
             </a>
           </p>
           <div className={styles['footer-separator']} />
@@ -64,7 +47,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Code of Conduct
+              آیین نامه
             </a>
           </p>
           {LEGAL_URL && (
@@ -77,7 +60,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Legal
+                  حقوقی
                 </a>
               </p>
             </>

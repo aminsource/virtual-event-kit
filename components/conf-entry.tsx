@@ -77,7 +77,7 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
 
   return (
     <div className={cn(styles.container, styleUtils.appear, styleUtils['appear-first'])}>
-      <h1 className={cn(styles.hero)}>Join the conference.</h1>
+      <h1 className={cn(styles.hero)}>به همایش بپیوندید.</h1>
       <h2 className={cn(styles.description)}>{SITE_DESCRIPTION}</h2>
       <form onSubmit={onSubmit} className={styles.form}>
         <div className={styles['form-row']}>
@@ -100,8 +100,8 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
                 onChange={e => setEmailInput(e.target.value)}
                 onFocus={() => setFocused(true)}
                 onBlur={() => setFocused(false)}
-                placeholder="Enter email to join the event"
-                aria-label="Your email address"
+                placeholder="ایمیل را وارد کنید و به رویداد بپوندید"
+                aria-label="آدرس ایمیل شما"
                 required
               />
             )}
@@ -115,7 +115,7 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
             {formState === 'loading' ? (
               <LoadingDots size={4} />
             ) : (
-              <>{formState === 'error' ? 'Try Again' : 'Join'}</>
+              <>{formState === 'error' ? 'تلاش مجدد' : 'پیوستن'}</>
             )}
           </button>
         </div>

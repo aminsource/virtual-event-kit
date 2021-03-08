@@ -21,7 +21,7 @@ export default class CustomDocument extends Document {
     return (
       <Html lang="en">
         <Head />
-        <body>
+        <body dir="rtl">
           <Main />
           <NextScript />
         </body>

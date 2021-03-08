@@ -42,7 +42,7 @@
 @media (min-width: 768px) {
   .input {
     width: calc(100% - var(--space-32x));
-    padding-right: 0;
+    padding-right: 5;
   }
 }
 
@@ -121,7 +121,7 @@
     margin-top: 0;
     position: absolute;
     border-radius: 5px;
-    right: var(--space-2x);
+    left: var(--space-2x);
     top: var(--space-2x);
   }
 }

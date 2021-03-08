@@ -1,26 +1,11 @@
-/**
- * Copyright 2020 Vercel Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
 .wrapper {
   margin-top: var(--space-12x);
 }
 
 .hero {
-  font-size: 52px;
-  line-height: 1.15;
+  font-size: 40px;
+  line-height: 1.7;
   letter-spacing: -0.05em;
   font-weight: 700;
   text-align: center;
@@ -61,8 +46,8 @@
 
 @media (min-width: 768px) {
   .hero {
-    font-size: 100px;
-    line-height: 1;
+    font-size: 90px;
+    line-height: 1.5;
     font-weight: 800;
     margin: 0 0px 40px;
   }
