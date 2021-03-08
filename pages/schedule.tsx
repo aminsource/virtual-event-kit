@@ -29,13 +29,13 @@ export default function SchedulePage({ allStages }: Props) {
   );
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const allStages = await getAllStages();
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+//   const allStages = await getAllStages();
 
-  return {
-    props: {
-      allStages
-    },
-    revalidate: 60
-  };
-};
+//   return {
+//     props: {
+//       allStages
+//     },
+//     revalidate: 60
+//   };
+// };
