@@ -23,38 +23,38 @@ export default function StagePage({ stage, allStages }: Props) {
   return (
     <Page meta={meta} fullViewport>
       <Layout>
-        <StageContainer stage={stage} allStages={allStages} />
+        {/* <StageContainer stage={stage} allStages={allStages} /> */}
       </Layout>
     </Page>
   );
 }
 
-export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
-  const slug = params?.slug;
-  const stages = await getAllStages();
-  const stage = stages.find((s: Stage) => s.slug === slug) || null;
+// export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+//   const slug = params?.slug;
+//   const stages = await getAllStages();
+//   const stage = stages.find((s: Stage) => s.slug === slug) || null;
 
-  if (!stage) {
-    return {
-      notFound: true
-    };
-  }
+//   if (!stage) {
+//     return {
+//       notFound: true
+//     };
+//   }
 
-  return {
-    props: {
-      stage,
-      allStages: stages
-    },
-    revalidate: 60
-  };
-};
+//   return {
+//     props: {
+//       stage,
+//       allStages: stages
+//     },
+//     revalidate: 60
+//   };
+// };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const stages = await getAllStages();
-  const slugs = stages.map((s: Stage) => ({ params: { slug: s.slug } }));
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const stages = await getAllStages();
+//   const slugs = stages.map((s: Stage) => ({ params: { slug: s.slug } }));
 
-  return {
-    paths: slugs,
-    fallback: false
-  };
-};
+//   return {
+//     paths: slugs,
+//     fallback: false
+//   };
+// };
