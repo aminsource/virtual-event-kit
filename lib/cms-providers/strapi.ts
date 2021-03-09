@@ -1,5 +1,4 @@
 import { Job, Sponsor, Stage, Speaker } from '@lib/types';
-
 const API_URL = 'http://api.hoomanamini.ir/graphql';
 // const API_TOKEN = process.env.DATOCMS_READ_ONLY_API_TOKEN;
 
@@ -29,13 +28,20 @@ async function fetchCmsAPI(query: string, { variables }: { variables?: Record<st
 export async function getAllSpeakers(): Promise<Speaker[]> {
     const data = await fetchCmsAPI(`
 {
-  speakers{
+ speakers{
     name
+    bio
+    slug
+    title
+    image{
+      url
+    }
+    twitter
+    github
+    company
   }
 }  `);
-
-    console.log(data);
-    return data;
+    return data.speakers;
 }
 
 

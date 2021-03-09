@@ -22,8 +22,8 @@ if (process.env.DATOCMS_READ_ONLY_API_TOKEN) {
 
 export async function getAllSpeakers(): Promise<Speaker[]> {
 
-  strapiCmsApi.getAllSpeakers();
-  return cmsApi.getAllSpeakers();
+  return strapiCmsApi.getAllSpeakers();
+  // return cmsApi.getAllSpeakers();
 }
 
 export async function getAllStages(): Promise<Stage[]> {

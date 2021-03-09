@@ -4,6 +4,7 @@ import cn from 'classnames';
 import GithubIcon from '@components/icons/icon-github';
 import { Speaker } from '@lib/types';
 import styles from './speaker-section.module.css';
+import { BACKEND_URL } from '@lib/constants';
 
 const TwitterIcon = () => (
   <svg width={24} viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -19,6 +20,8 @@ type Props = {
 };
 
 export default function SpeakerSection({ speaker }: Props) {
+
+
   return (
     <>
       <Link href="/speakers">
@@ -36,7 +39,7 @@ export default function SpeakerSection({ speaker }: Props) {
           >
             <path d="M15 18l-6-6 6-6" />
           </svg>
-          Back to speakers
+          برگشت به سخنرانان
         </a>
       </Link>
       <div key={speaker.name} className={styles.container}>
@@ -44,7 +47,7 @@ export default function SpeakerSection({ speaker }: Props) {
           <Image
             alt={speaker.name}
             title={speaker.name}
-            src={speaker.image.url}
+            src={`${BACKEND_URL}${speaker.image[0].url}`}
             className={styles.image}
             loading="lazy"
             height={400}
@@ -58,9 +61,9 @@ export default function SpeakerSection({ speaker }: Props) {
               {`${speaker.title} @ `}
               <span className={styles.company}>{speaker.company}</span>
             </p>
-            <h2 className={styles['bio-header']}>Bio</h2>
+            <h2 className={styles['bio-header']}>بیوگرافی</h2>
             <p className={styles.bio}>{speaker.bio}</p>
-            <h3 className={styles['socials-header']}>Social Media</h3>
+            <h3 className={styles['socials-header']}>شبکه های اجتماعی</h3>
             {speaker.twitter ? (
               <a
                 aria-label="Twitter"

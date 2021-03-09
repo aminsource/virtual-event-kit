@@ -15,6 +15,7 @@
  */
 
 export const SITE_URL = 'https://event.hoomanamini.ir';
+export const BACKEND_URL = "http://api.hoomanamini.ir";
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
 export const TWITTER_USER_NAME = 'hooman.amini';
 export const BRAND_NAME = 'رویداد مجازی';
