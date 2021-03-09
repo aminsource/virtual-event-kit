@@ -44,7 +44,7 @@
 
 .header-right {
   margin: var(--space-2x) var(--space-16x);
-  display: none;
+  /* display: none; */
 }
 
 @media screen and (min-width: 770px) {

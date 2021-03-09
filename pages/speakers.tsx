@@ -31,13 +31,13 @@ type Props = {
 
 export default function Speakers({ speakers }: Props) {
   const meta = {
-    title: 'سخنرانان رویداد مجازی',
+    title: 'سخنران ها رویداد مجازی',
     description: META_DESCRIPTION
   };
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="سخنرانان" description={meta.description} />
+        <Header hero="سخنران ها" description={meta.description} />
         <SpeakersGrid speakers={speakers} />
       </Layout>
     </Page>

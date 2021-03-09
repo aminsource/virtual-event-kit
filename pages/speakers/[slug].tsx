@@ -30,7 +30,7 @@ type Props = {
 
 export default function SpeakerPage({ speaker }: Props) {
   const meta = {
-    title: 'سخنرانان رویداد مجازی',
+    title: 'سخنران ها رویداد مجازی',
     description: META_DESCRIPTION
   };
 
