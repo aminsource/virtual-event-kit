@@ -4,12 +4,14 @@ import cn from 'classnames';
 import { Sponsor } from '@lib/types';
 import styles from './sponsor-section.module.css';
 import styleUtils from './utils.module.css';
+import { BACKEND_URL } from '@lib/constants';
 
 type Props = {
   sponsor: Sponsor;
 };
 
 export default function SponsorSection({ sponsor }: Props) {
+
   return (
     <>
       <Link href="/expo">
@@ -27,7 +29,7 @@ export default function SponsorSection({ sponsor }: Props) {
           >
             <path d="M15 18l-6-6 6-6" />
           </svg>
-          Back to expo
+          برگشت به حامیان
         </a>
       </Link>
       <div className={styles.layout}>
@@ -45,7 +47,7 @@ export default function SponsorSection({ sponsor }: Props) {
           <div className={styles['name-and-logo']}>
             <Image
               alt={sponsor.name}
-              src={sponsor.logo.url}
+              src={`${BACKEND_URL}${sponsor.logo[0].url}`}
               className={styles.image}
               loading="lazy"
               title={sponsor.name}
@@ -72,12 +74,12 @@ export default function SponsorSection({ sponsor }: Props) {
               type="button"
               className={cn(styles.button, styles['button-link'])}
             >
-              Chat on Discord
+              چت در دیسکورد
             </a>
           </div>
           <div className={styles.resources}>
-            <h2 className={styles.heading}>Resources</h2>
-            {sponsor.links.map(link => (
+            <h2 className={styles.heading}>منابع</h2>
+            {/* {sponsor.links.map(link => (
               <a
                 key={link.url}
                 href={link.url}
@@ -102,7 +104,7 @@ export default function SponsorSection({ sponsor }: Props) {
                   <path d="M10 14L21 3" />
                 </svg>
               </a>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>

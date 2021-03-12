@@ -66,7 +66,7 @@ export const NAVIGATION = [
     route: '/speakers'
   },
   {
-    name: 'نمایشگاه',
+    name: 'حامیان',
     route: '/expo'
   },
   {

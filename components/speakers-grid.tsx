@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Speaker } from '@lib/types';
 import styles from './speakers-grid.module.css';
+import { BACKEND_URL } from '@lib/constants';
 
 type Props = {
   speakers: Speaker[];
@@ -17,7 +18,7 @@ export default function SpeakersGrid({ speakers }: Props) {
             <div className={styles.imageWrapper}>
               <Image
                 alt={speaker.name}
-                src={`http://api.hoomanamini.ir${speaker.image[0].url}`}
+                src={`${BACKEND_URL}${speaker.image[0].url}`}
                 className={styles.image}
                 loading="lazy"
                 quality="50"

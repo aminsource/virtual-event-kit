@@ -19,8 +19,10 @@ import Image from 'next/image';
 import cn from 'classnames';
 import { Sponsor } from '@lib/types';
 import styles from './sponsors-grid.module.css';
+import { BACKEND_URL } from '@lib/constants';
 
 function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
+
   return (
     <Link key={sponsor.name} href={`/expo/${sponsor.slug}`}>
       <a
@@ -34,7 +36,7 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
         <div className={styles.imageWrapper}>
           <Image
             alt={sponsor.name}
-            src={sponsor.cardImage.url}
+            src={`${BACKEND_URL}${sponsor.cardImage[0].url}`}
             className={cn(styles.image, {
               [styles.silver]: sponsor.tier === 'silver'
             })}

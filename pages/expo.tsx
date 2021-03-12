@@ -31,14 +31,14 @@ type Props = {
 
 export default function ExpoPage({ sponsors }: Props) {
   const meta = {
-    title: 'Expo - Virtual Event Starter Kit',
+    title: 'حامیان رویداد مجازی',
     description: META_DESCRIPTION
   };
 
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Expo" description={meta.description} />
+        <Header hero="حامیان" description={meta.description} />
         <SponsorsGrid sponsors={sponsors} />
       </Layout>
     </Page>
@@ -47,7 +47,6 @@ export default function ExpoPage({ sponsors }: Props) {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const sponsors = await getAllSponsors();
-
   return {
     props: {
       sponsors

@@ -96,7 +96,7 @@
   font-weight: 800;
   color: #fff;
   font-size: 30px;
-  margin: 0;
+  margin: 1;
   line-height: 1.4;
   letter-spacing: -0.05em;
   margin: var(--space-4x) 0 0 0;
@@ -197,7 +197,7 @@
 
   .name {
     font-size: 48px;
-    margin: 0 0 0 var(--space-4x);
+    margin: 0 var(--space-4x) 0 0 ;
   }
 
   .image {

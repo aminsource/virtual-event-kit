@@ -14,9 +14,10 @@ type Props = {
 
 export default function SponsorPage({ sponsor }: Props) {
   const meta = {
-    title: 'نمایشگاه رویداد مجازی',
+    title: 'حامیان رویداد مجازی',
     description: META_DESCRIPTION
   };
+
 
   return (
     <Page meta={meta}>

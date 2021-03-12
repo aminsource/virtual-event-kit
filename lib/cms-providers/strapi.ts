@@ -44,4 +44,28 @@ export async function getAllSpeakers(): Promise<Speaker[]> {
     return data.speakers;
 }
 
+export async function getAllSponsors(): Promise<Sponsor[]> {
+    const data = await fetchCmsAPI(`
+{
+  companies{
+    name
+    description
+    slug
+    website
+    callToAction
+    callToActionLink
+    discord
+    youtubeSlug
+    tier
+    cardImage{
+      url
+    }
+    logo{
+      url
+    }
 
+  }
+}`);
+
+    return data.companies;
+}
